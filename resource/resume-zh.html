@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jimmy H — 後端工程師</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000;
+      background: #fff;
+      font-family: Arial, "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.4;
+    }
+    .page { width: 210mm; max-width: 100%; margin: 24px auto; padding: 14mm; }
+    header { border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 16px; }
+    h1 { margin: 0 0 3px; font-size: 24pt; line-height: 1.15; letter-spacing: 0.5px; }
+    .headline { margin: 0 0 8px; font-size: 11pt; }
+    .contact { display: flex; flex-wrap: wrap; gap: 3px 12px; font-size: 9pt; }
+    a { color: inherit; text-decoration: none; }
+    .language-switch { display: flex; justify-content: flex-end; gap: 12px; margin-bottom: 12px; font-size: 9pt; }
+    .language-switch a { text-decoration: underline; text-underline-offset: 3px; }
+    .language-switch a:hover { color: #555; }
+    .language-switch [aria-current="page"] { font-weight: bold; }
+    section { margin-bottom: 16px; }
+    h2 {
+      margin: 0 0 8px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #000;
+      font-size: 11pt;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      break-after: avoid;
+    }
+    p { margin: 0 0 6px; }
+    .skills { margin: 0; }
+    .skills > div { display: grid; grid-template-columns: 132px 1fr; gap: 8px; margin-bottom: 4px; }
+    dt { font-weight: bold; }
+    dd { margin: 0; }
+    .entry-heading { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; break-after: avoid; }
+    h3 { margin: 0; font-size: 10.5pt; }
+    .date { white-space: nowrap; font-size: 9.5pt; }
+    .company { margin: 2px 0 6px; color: #333; break-after: avoid; }
+    ul { margin: 6px 0 0; padding-left: 18px; }
+    li { margin-bottom: 5px; break-inside: avoid; }
+    .education { break-inside: avoid; }
+    @media screen and (max-width: 600px) {
+      .page { margin: 0; padding: 20px; }
+      .skills > div { grid-template-columns: 1fr; gap: 0; }
+      .entry-heading { flex-wrap: wrap; gap: 2px 12px; }
+    }
+    @media print {
+      .language-switch { display: none; }
+      .page { width: auto; max-width: none; margin: 0; padding: 0; }
+      a { color: #000; }
+      p { orphans: 2; widows: 2; }
+    }
+    @page { size: A4; margin: 14mm; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="language-switch" aria-label="語言切換">
+        <a href="../index.html" lang="en" hreflang="en">English</a>
+        <span lang="zh-Hant" aria-current="page">繁體中文</span>
+    </nav>
+    <header>
+      <h1>Jimmy H</h1>
+      <p class="headline">後端工程師 | Kotlin / Java / Spring Boot</p>
+      <div class="contact" aria-label="聯絡資訊">
+        <a href="mailto:h.jimmy.dev@gmail.com">h.jimmy.dev@gmail.com</a>
+        <a href="https://www.linkedin.com/in/jimmy-hh">linkedin.com/in/jimmy-hh</a>
+        <a href="https://github.com/stream2java">github.com/stream2java</a>
+      </div>
+    </header>
+
+    <section aria-labelledby="summary">
+      <h2 id="summary">個人簡介</h2>
+      <p>過去 3 年多主要使用 Kotlin、Spring Boot 開發 SaaS 預約管理平台，參與預約排程、金流串接、報表及儀表板等功能開發。平台目前服務超過 1.2 萬家店家，累計處理超過 520 萬筆訂單。 除了功能開發，也有 RESTful API、SQL 效能優化、Redis 快取、自動化測試及第三方 API 整合的實務經驗。</p>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">技術能力</h2>
+      <dl class="skills">
+        <div><dt>後端開發</dt><dd>Kotlin, Java, Spring Boot, Spring Security, RESTful APIs, Microservices</dd></div>
+        <div><dt>資料庫與搜尋</dt><dd>MySQL, PostgreSQL, Redis, OpenSearch</dd></div>
+        <div><dt>雲端與 DevOps</dt><dd>AWS, Docker, Git, CI/CD, Maven, Gradle</dd></div>
+        <div><dt>第三方服務串接</dt><dd>TapPay, LINE API, Firebase Cloud Messaging, Slack API</dd></div>
+        <div><dt>測試與開發實務</dt><dd>JUnit 5, API Testing, TDD, Specification-driven Development</dd></div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">工作經歷</h2>
+      <article>
+        <div class="entry-heading">
+          <h3>Kotlin 後端工程師</h3>
+          <span class="date">08/2022 – 05/2026</span>
+        </div>
+        <p class="company">HotCake Company | 台北</p>
+        <p>與 PM、設計師、前端工程師及 QA 協作，確認需求並完成後端功能開發。採用 Specification-driven Development 與 TDD 進行開發，並使用 JUnit 5 撰寫及維護 API 測試。</p>
+        <ul>
+          <li><strong>預約排程：</strong>維護與擴充預約與排程模組，包含服務管理、資源分配及自動提醒功能。</li>
+          <li><strong>金流整合：</strong>串接 TapPay 信用卡與虛擬帳號付款，支援多種付款方式的退款與對帳流程。</li>
+          <li><strong>通知系統：</strong>開發 LINE、簡訊（SMS）與 Firebase Cloud Messaging（FCM）通知功能，修復排程問題並維護 Slack API 串接。</li>
+          <li><strong>報表開發：</strong>開發現金流、門市營運等儀表板數據查詢與 20 種以上報表，並使用 EasyExcel、Apache POI 實作 Excel 自動匯出。</li>
+          <li><strong>效能優化：</strong>調整 SQL 查詢與資料庫索引，並使用 OpenSearch 模糊搜尋改善查詢效能；將耗時程式改由 Background Job 處理。</li>
+          <li><strong>權限管理：</strong>維護與擴充既有 Spring Security RBAC 權限控管功能，支援多租戶平台的角色與權限管理</li>
+          <li><strong>日本市場支援：</strong>配合日本市場需求擴充後端模組，支援依國家區分的公告、通知與任務功能。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="education" aria-labelledby="education">
+      <h2 id="education">學歷</h2>
+      <div class="entry-heading">
+        <h3>淡江大學</h3>
+        <span class="date">09/2014 – 06/2018</span>
+      </div>
+      <p>保險與風險管理（學士）</p>
+    </section>
+  </main>
+</body>
+</html>
